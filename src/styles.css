@@ -1,1 +1,144 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container {
+    background-color: #fff;
+    padding: 20px;
+    border: 2px solid #ccc;
+    width: 500px;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 48px;
+    color: #000;
+}
+
+header h1 sub {
+    font-size: 14px;
+}
+
+.project-info {
+    margin: 20px 0;
+}
+
+.carbon-rating-container {
+    display: flex;
+    align-items: center;
+}
+
+.arrow {
+    margin-right: 5px;
+}
+
+.carbon-rating {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+	margin-top: 6px;
+}
+
+/* Adjusted margin between A++ and A+ bars to 2px */
+.bar-with-label.a-pp-label {
+    display: flex;
+    align-items: center;
+    margin-bottom: 2px; /* Distance between A++ and A+ */
+}
+
+/* Adjusted margin between A+ and A bars to 5px */
+.bar-with-label.a-p-label {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px; /* Distance between A+ and A */
+}
+
+.bar {
+    color: white;
+    text-align: right;
+    padding: 5px 25px;
+    clip-path: polygon(0% 0%, 90% 0%, 100% 50%, 90% 100%, 0% 100%);
+}
+
+/* Separate class for A++ bar */
+.bar.a-pp {
+    height: 14px; /* Height for A++ */
+    background-color: #396433;
+	width: 155px;
+}
+
+/* Separate class for A+ bar */
+.bar.a-p {
+    height: 14px; /* Height for A+ */
+    background-color: #669e4c;
+	width: 160px;
+}
+
+/* General bar styling for A, B, C, D, E, F, G */
+.a, .b, .c, .d, .e, .f, .g {
+    height: 30px;
+    margin-bottom: 5px;
+}
+
+.a {
+    background-color: #afbe00;
+	width: 170px;
+}
+
+.b {
+    background-color: #f9ec46;
+	width: 180px;
+}
+
+.c {
+    background-color: #f9d956;
+	width: 190px;
+}
+
+.d {
+    background-color: #e5761e;
+	width: 200px;
+}
+
+.e {
+    background-color: #dc242e;
+	width: 210px;
+}
+
+.f {
+    background-color: #c41017;
+	width: 220px;
+}
+
+.g {
+    background-color: #ae2a25;
+	width: 230px;
+}
+
+/* Container to position A++ and A+ labels next to the bar */
+.bar-with-label .label {
+    margin-left: 5px; /* Space between bar and label */
+    font-weight: bold;
+}
+
+footer {
+    font-size: 12px;
+    color: #666;
+}
+
+footer a {
+    color: #00f;
+    text-decoration: none;
+}
