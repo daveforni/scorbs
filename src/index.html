@@ -6,6 +6,7 @@
     <title>SCORS for Bridges</title>
     <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
     <div class="container">
         <header>
@@ -22,31 +23,33 @@
             <div class="arrow">
                 <svg height="320" width="75">
                     <!-- Vertical bar starting at the top of A++ -->
-                    <line x1="65" y1="10" x2="65" y2="285" style="stroke:black;stroke-width:2"/>
+                    <line x1="65" y1="10" x2="65" y2="285" style="stroke:black;stroke-width:3"/>
                     <!-- Arrow at the bottom of the vertical bar -->
-                    <polygon points="60,285 70,285 65,290" style="fill:black;stroke:black;stroke-width:2"/>
+                    <polygon points="62,285 68,285 65,288" style="fill:black;stroke:black;stroke-width:3"/>
                     <!-- Tickmarks and labels -->
-                    <line x1="50" y1="11" x2="65" y2="11" style="stroke:black;stroke-width:2"/>
-                    <text x="0" y="15" font-size="14">0</text>					
-                    <line x1="50" y1="46" x2="65" y2="46" style="stroke:black;stroke-width:2"/>
-                    <text x="0" y="50" font-size="14">500</text>
-                    <line x1="50" y1="81" x2="65" y2="81" style="stroke:black;stroke-width:2"/>
-                    <text x="0" y="85" font-size="14">1000</text>
-                    <line x1="50" y1="151" x2="65" y2="151" style="stroke:black;stroke-width:2"/>
-                    <text x="0" y="155" font-size="14">2000</text>
-                    <line x1="50" y1="221" x2="65" y2="221" style="stroke:black;stroke-width:2"/>
-                    <text x="0" y="225" font-size="14">  3000</text>
-                    <line x1="50" y1="256" x2="65" y2="256" style="stroke:black;stroke-width:2"/>
-                    <text x="0" y="260" font-size="14">> 3500</text>
+                    <line x1="50" y1="11.5" x2="65" y2="11.5" style="stroke:black;stroke-width:3"/>
+                    <text x="45" y="15" font-size="14" text-anchor="end">0</text>
+                    <line x1="50" y1="46.5" x2="65" y2="46.5" style="stroke:black;stroke-width:3"/>
+                    <text x="45" y="50" font-size="14" text-anchor="end">500</text>
+                    <line x1="50" y1="81.5" x2="65" y2="81.5" style="stroke:black;stroke-width:3"/>
+                    <text x="45" y="85" font-size="14" text-anchor="end">1000</text>
+                    <line x1="50" y1="151.5" x2="65" y2="151.5" style="stroke:black;stroke-width:3"/>
+                    <text x="45" y="155" font-size="14" text-anchor="end">2000</text>
+                    <line x1="50" y1="221.5" x2="65" y2="221.5" style="stroke:black;stroke-width:3"/>
+                    <text x="45" y="225" font-size="14" text-anchor="end">3000</text>
+                    <line x1="50" y1="256.5" x2="65" y2="256.5" style="stroke:black;stroke-width:3"/>
+                    <text x="45" y="260" font-size="14" text-anchor="end">> 3500</text>
                 </svg>
             </div>
 
             <div class="carbon-rating">
-                <div class="bar-with-label">
+                <!-- A++ bar and label -->
+                <div class="bar-with-label a-pp-label">
                     <div class="bar a-pp"></div>
                     <span class="label">A++</span>
                 </div>
-                <div class="bar-with-label">
+                <!-- A+ bar and label -->
+                <div class="bar-with-label a-p-label">
                     <div class="bar a-p"></div>
                     <span class="label">A+</span>
                 </div>
