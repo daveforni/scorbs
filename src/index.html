@@ -6,67 +6,107 @@
     <title>SCORS for Bridges</title>
     <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
-    <div class="container">
-        <header>
-            <h1>S<font color="#477957">CO<sub>2</sub></font>RBS</h1>
-        </header>
+    <div class="main-container">
+        <!-- Carbon Rating Container -->
+        <div class="container">
+            <header>
+                <h1>S<font color="#477957">CO<sub>2</sub></font>RBS</h1>
+            </header>
 
-        <section class="project-info">
-            <h2>Example Project</h2>
-            <p>Structural embodied carbon, modules A1-A5</p>
-			<p><i>kgCO₂e / m²</i></p>
-        </section>
+            <section class="project-info">
+                <h2>Example Project</h2>
+                <p>Structural embodied carbon, modules A1-A5</p>
+			    <p><i>kgCO₂e / m²</i></p>
+            </section>
 
-        <section class="carbon-rating-container">
-            <div class="arrow">
-                <svg height="320" width="75">
-                    <!-- Vertical bar starting at the top of A++ -->
-                    <line x1="65" y1="10" x2="65" y2="285" style="stroke:black;stroke-width:3"/>
-                    <!-- Arrow at the bottom of the vertical bar -->
-                    <polygon points="62,285 68,285 65,288" style="fill:black;stroke:black;stroke-width:3"/>
-                    <!-- Tickmarks and labels -->
-                    <line x1="50" y1="11.5" x2="65" y2="11.5" style="stroke:black;stroke-width:3"/>
-                    <text x="45" y="15" font-size="14" text-anchor="end">0</text>
-                    <line x1="50" y1="46.5" x2="65" y2="46.5" style="stroke:black;stroke-width:3"/>
-                    <text x="45" y="50" font-size="14" text-anchor="end">500</text>
-                    <line x1="50" y1="81.5" x2="65" y2="81.5" style="stroke:black;stroke-width:3"/>
-                    <text x="45" y="85" font-size="14" text-anchor="end">1000</text>
-                    <line x1="50" y1="151.5" x2="65" y2="151.5" style="stroke:black;stroke-width:3"/>
-                    <text x="45" y="155" font-size="14" text-anchor="end">2000</text>
-                    <line x1="50" y1="221.5" x2="65" y2="221.5" style="stroke:black;stroke-width:3"/>
-                    <text x="45" y="225" font-size="14" text-anchor="end">3000</text>
-                    <line x1="50" y1="256.5" x2="65" y2="256.5" style="stroke:black;stroke-width:3"/>
-                    <text x="45" y="260" font-size="14" text-anchor="end">> 3500</text>
-                </svg>
-            </div>
-
-            <div class="carbon-rating">
-                <!-- A++ bar and label -->
-                <div class="bar-with-label a-pp-label">
-                    <div class="bar a-pp"></div>
-                    <span class="label">A++</span>
+            <section class="carbon-rating-container">
+                <div class="arrow">
+                    <svg height="320" width="75">
+                        <!-- Vertical bar starting at the top of A++ -->
+                        <line x1="65" y1="10" x2="65" y2="285" style="stroke:black;stroke-width:3"/>
+                        <!-- Arrow at the bottom of the vertical bar -->
+                        <polygon points="62,285 68,285 65,288" style="fill:black;stroke:black;stroke-width:3"/>
+                        <!-- Tickmarks and labels -->
+                        <line x1="50" y1="11.5" x2="65" y2="11.5" style="stroke:black;stroke-width:3"/>
+                        <text x="45" y="15" font-size="14">0</text>
+                        <line x1="50" y1="46.5" x2="65" y2="46.5" style="stroke:black;stroke-width:3"/>
+                        <text x="45" y="50" font-size="14">500</text>
+                        <line x1="50" y1="81.5" x2="65" y2="81.5" style="stroke:black;stroke-width:3"/>
+                        <text x="45" y="85" font-size="14">1000</text>
+                        <line x1="50" y1="151.5" x2="65" y2="151.5" style="stroke:black;stroke-width:3"/>
+                        <text x="45" y="155" font-size="14">2000</text>
+                        <line x1="50" y1="221.5" x2="65" y2="221.5" style="stroke:black;stroke-width:3"/>
+                        <text x="45" y="225" font-size="14">3000</text>
+                        <line x1="50" y1="256.5" x2="65" y2="256.5" style="stroke:black;stroke-width:3"/>
+                        <text x="45" y="260" font-size="14">> 3500</text>
+                    </svg>
                 </div>
-                <!-- A+ bar and label -->
-                <div class="bar-with-label a-p-label">
-                    <div class="bar a-p"></div>
-                    <span class="label">A+</span>
-                </div>
-                <div class="bar a">A</div>
-                <div class="bar b">B</div>
-                <div class="bar c">C</div>
-                <div class="bar d">D</div>
-                <div class="bar e">E</div>
-                <div class="bar f">F</div>
-                <div class="bar g">G</div>
-            </div>
-        </section>
 
-        <footer>
-            <p>Carbon footprint calculated in accordance with IStructE publication 'How to calculate embodied carbon'.</p>
-            <p>Project calculations available at <a href="#">www.exampleURL.com</a></p>
-        </footer>
+                <div class="carbon-rating">
+                    <div class="bar-with-label a-pp-label">
+                        <div class="bar a-pp"></div>
+                        <span class="label">A++</span>
+                    </div>
+                    <div class="bar-with-label a-p-label">
+                        <div class="bar a-p"></div>
+                        <span class="label">A+</span>
+                    </div>
+                    <div class="bar a">A</div>
+                    <div class="bar b">B</div>
+                    <div class="bar c">C</div>
+                    <div class="bar d">D</div>
+                    <div class="bar e">E</div>
+                    <div class="bar f">F</div>
+                    <div class="bar g">G</div>
+                </div>
+            </section>
+
+            <footer>
+                <p>Carbon footprint calculated in accordance with IStructE publication 'How to calculate embodied carbon'.</p>
+                <p>Project calculations available at <a href="#">www.exampleURL.com</a></p>
+            </footer>
+        </div>
+
+        <!-- Project Details Container -->
+        <div class="container details-container">
+            <header>
+                <h2>Project Details</h2>
+            </header>
+
+            <section class="details-input">
+                <div class="input-group">
+                    <label for="project-name">Project Name:</label>
+                    <input type="text" id="project-name" placeholder="Enter project name">
+                </div>
+                <div class="input-group">
+                    <label for="bridge-type">Bridge Type:</label>
+                    <select id="bridge-type" required>
+                        <option value="" disabled selected>Select bridge type</option>
+                        <option value="beam">Beam Bridge</option>
+                        <option value="truss">Truss Bridge</option>
+                        <option value="cantilever">Cantilever Bridge</option>
+                        <option value="arch">Arch Bridge</option>
+                        <option value="tied-arch">Tied Arch Bridge</option>
+                        <option value="suspension">Suspension Bridge</option>
+                        <option value="cable-stayed">Cable-Stayed Bridge</option>
+                        <option value="movable">Movable Bridge</option>
+                    </select>
+                </div>
+                <div class="input-group">
+                    <label for="calculation-link">Calculation Link:</label>
+                    <input type="url" id="calculation-link" placeholder="Enter calculation link">
+                </div>
+                <div class="input-group">
+                    <label for="carbon-footprint">Carbon Footprint (kgCO₂e):</label>
+                    <input type="number" id="carbon-footprint" placeholder="Enter carbon footprint">
+                </div>
+                <div class="input-group">
+                    <label for="functional-area">Functional Area (m²):</label>
+                    <input type="number" id="functional-area" placeholder="Enter functional area">
+                </div>
+            </section>
+        </div>
     </div>
 
     <script src="script.js"></script>
