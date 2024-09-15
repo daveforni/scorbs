@@ -15,9 +15,10 @@
             </header>
 
             <section class="project-info">
-                <h2>Example Project</h2>
-                <p>Structural embodied carbon, modules A1-A5</p>
-			    <p><i>kgCO₂e / m²</i></p>
+                <h2 id="project-title">Example Project</h2> <!-- Placeholder for Project Name -->
+                <p id="bridge-type-display">Structural embodied carbon, modules A1-A5</p> <!-- Placeholder for Bridge Type -->
+                <p>Structural embodied carbon, modules A1-A5</p> <!-- Permanent message below bridge type -->
+                <p><i id="carbon-impact-display">kgCO₂e / m²</i></p> <!-- Placeholder for calculated Carbon Impact -->
             </section>
 
             <section class="carbon-rating-container">
@@ -64,7 +65,7 @@
 
             <footer>
                 <p>Carbon footprint calculated in accordance with IStructE publication 'How to calculate embodied carbon'.</p>
-                <p>Project calculations available at <a href="#">www.exampleURL.com</a></p>
+                <p>Project calculations available at <a href="#" id="calculation-link-display">www.exampleURL.com</a></p>
             </footer>
         </div>
 
@@ -83,14 +84,14 @@
                     <label for="bridge-type">Bridge Type:</label>
                     <select id="bridge-type" required>
                         <option value="" disabled selected>Select bridge type</option>
-                        <option value="beam">Beam Bridge</option>
-                        <option value="truss">Truss Bridge</option>
-                        <option value="cantilever">Cantilever Bridge</option>
-                        <option value="arch">Arch Bridge</option>
-                        <option value="tied-arch">Tied Arch Bridge</option>
-                        <option value="suspension">Suspension Bridge</option>
-                        <option value="cable-stayed">Cable-Stayed Bridge</option>
-                        <option value="movable">Movable Bridge</option>
+                        <option value="Beam Bridge">Beam Bridge</option>
+                        <option value="Truss Bridge">Truss Bridge</option>
+                        <option value="Cantilever Bridge">Cantilever Bridge</option>
+                        <option value="Arch Bridge">Arch Bridge</option>
+                        <option value="Tied Arch Bridge">Tied Arch Bridge</option>
+                        <option value="Suspension Bridge">Suspension Bridge</option>
+                        <option value="Cable-Stayed Bridge">Cable-Stayed Bridge</option>
+                        <option value="Movable Bridge">Movable Bridge</option>
                     </select>
                 </div>
                 <div class="input-group">
@@ -106,9 +107,12 @@
                     <input type="number" id="functional-area" placeholder="Enter functional area">
                 </div>
             </section>
+
+            <!-- Calculate Button -->
+            <button id="calculate-btn">Calculate</button>
         </div>
     </div>
 
-    <script src="script.js"></script>
+    <script src="main.js"></script>
 </body>
 </html>
