@@ -31,6 +31,8 @@ body {
 
 .details-container {
     text-align: left;
+	padding: 20px;
+	width:300px;
 }
 
 header h1 {
@@ -40,6 +42,10 @@ header h1 {
 
 header h1 sub {
     font-size: 14px;
+}
+
+header h2 {
+    margin-bottom: 10px;
 }
 
 .project-info {
@@ -60,6 +66,7 @@ header h1 sub {
     flex-direction: column;
     align-items: flex-start;
     margin-top: -27px;
+	position:relative;
 }
 
 /* Adjusted margin between A++ and A+ bars to 2px */
@@ -162,36 +169,30 @@ text {
 }
 
 /* Input styles */
-.details-container input {
+.details-container input,
+.details-container select {
     width: 100%;
     padding: 8px;
-    margin: 5px 0 15px 0;
-    display: inline-block;
+    margin-top: 5px; /* Add some space between the label and the input field */
+    display: block; /* Ensure input/select boxes are block-level */
     border: 1px solid #ccc;
     border-radius: 4px;
     box-sizing: border-box;
+    background-color: #fff;
 }
 
 .details-container label {
-    font-weight: bold;
     margin-bottom: 5px;
-    display: inline-block;
+    display: block; /* Ensure the label takes up the full width */
 }
 
 /* Input container styling */
 .input-group {
-    margin-bottom: 15px;
+    margin-bottom: 15px; /* Add space between input groups */
 }
 
 /* Dropdown styling */
 .details-container select {
-    width: 100%;
-    padding: 8px;
-    margin: 5px 0 15px 0;
-    display: inline-block;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
     background-color: #fff;
     font-size: 14px;
 }
@@ -199,4 +200,43 @@ text {
 /* Optional: Styling for the default disabled option */
 select option:disabled {
     color: #999;
+}
+
+#calculate-btn {
+    width: 100px;
+    height: 30px;
+    margin-top: 10px;
+    font-weight: bold;
+    font-size: 16px;
+    cursor: pointer; /* Show pointer cursor on hover */
+    display: block;
+}
+
+/* Existing CSS remains unchanged, adding new styles for the black shape */
+
+/* Existing CSS remains unchanged, adding new styles for the black shape */
+
+/* Black shape styles */
+.black-shape {
+    position: absolute; /* Ensure it's positioned inside the carbon-rating container */
+    background-color: black;
+    height: 30px; /* Same height as other bars */
+    width: 100px; /* Similar width to other bars */
+	text-align: left;
+	padding: 2px 16px;
+    clip-path: polygon(0% 50%, 15% 0%, 100% 0%, 100% 100%, 15% 100%); /* Left-aligned shape */
+    right: -130px; /* Position it on the right side */
+    z-index: 1; /* Ensure it is above other bars */
+    color: white; /* Text color inside the black shape */
+    display: flex;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* Adjusted styling for the result text */
+.calculation-result {
+    position: absolute;
+	right: -130px;
+    font-size: 12px;
+    color: #333;
 }
