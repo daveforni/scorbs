@@ -14,7 +14,6 @@ body {
     min-height: 100vh;
 }
 
-/* Main container holding both sections side by side */
 .main-container {
     display: flex;
     justify-content: space-between;
@@ -49,7 +48,7 @@ header h2 {
 }
 
 .project-info {
-    margin: 20px 0;
+    margin: 10px 0;
 }
 
 .carbon-rating-container {
@@ -69,18 +68,16 @@ header h2 {
 	position:relative;
 }
 
-/* Adjusted margin between A++ and A+ bars to 2px */
 .bar-with-label.a-pp-label {
     display: flex;
     align-items: center;
-    margin-bottom: -2px; /* Distance between A++ and A+ */
+    margin-bottom: -2px;
 }
 
-/* Adjusted margin between A+ and A bars to 5px */
 .bar-with-label.a-p-label {
     display: flex;
     align-items: center;
-    margin-bottom: 2px; /* Distance between A+ and A */
+    margin-bottom: 2px;
 }
 
 .bar {
@@ -147,7 +144,6 @@ header h2 {
     width: 230px;
 }
 
-/* Container to position A++ and A+ labels next to the bar */
 .bar-with-label .label {
     margin-left: 5px;
     font-weight: bold;
@@ -163,18 +159,16 @@ footer a {
     text-decoration: none;
 }
 
-/* Align tickmark labels to the right */
 text {
     text-anchor: end;
 }
 
-/* Input styles */
 .details-container input,
 .details-container select {
     width: 100%;
     padding: 8px;
-    margin-top: 5px; /* Add some space between the label and the input field */
-    display: block; /* Ensure input/select boxes are block-level */
+    margin-top: 5px;
+    display: block;
     border: 1px solid #ccc;
     border-radius: 4px;
     box-sizing: border-box;
@@ -183,21 +177,18 @@ text {
 
 .details-container label {
     margin-bottom: 5px;
-    display: block; /* Ensure the label takes up the full width */
+    display: block;
 }
 
-/* Input container styling */
 .input-group {
-    margin-bottom: 15px; /* Add space between input groups */
+    margin-bottom: 15px;
 }
 
-/* Dropdown styling */
 .details-container select {
     background-color: #fff;
     font-size: 14px;
 }
 
-/* Optional: Styling for the default disabled option */
 select option:disabled {
     color: #999;
 }
@@ -205,35 +196,29 @@ select option:disabled {
 #calculate-btn {
     width: 100px;
     height: 30px;
-    margin-top: 10px;
+    margin-top: 20px;
     font-weight: bold;
     font-size: 16px;
     cursor: pointer; /* Show pointer cursor on hover */
     display: block;
 }
 
-/* Existing CSS remains unchanged, adding new styles for the black shape */
-
-/* Existing CSS remains unchanged, adding new styles for the black shape */
-
-/* Black shape styles */
 .black-shape {
-    position: absolute; /* Ensure it's positioned inside the carbon-rating container */
+    position: absolute;
     background-color: black;
-    height: 30px; /* Same height as other bars */
-    width: 100px; /* Similar width to other bars */
+    height: 30px;
+    width: 100px;
 	text-align: left;
 	padding: 2px 16px;
-    clip-path: polygon(0% 50%, 15% 0%, 100% 0%, 100% 100%, 15% 100%); /* Left-aligned shape */
-    right: -130px; /* Position it on the right side */
-    z-index: 1; /* Ensure it is above other bars */
-    color: white; /* Text color inside the black shape */
+    clip-path: polygon(0% 50%, 15% 0%, 100% 0%, 100% 100%, 15% 100%);
+    right: -130px;
+    z-index: 1;
+    color: white;
     display: flex;
     font-size: 24px;
     font-weight: bold;
 }
 
-/* Adjusted styling for the result text */
 .calculation-result {
     position: absolute;
 	right: -130px;
