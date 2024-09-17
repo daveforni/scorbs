@@ -3,18 +3,9 @@ document.getElementById('calculate-btn').addEventListener('click', function () {
     const bridgeType = document.getElementById('bridge-type').value;
     const carbonFootprint = parseFloat(document.getElementById('carbon-footprint').value);
     const functionalArea = parseFloat(document.getElementById('functional-area').value);
-    const calculationLink = document.getElementById('calculation-link').value;
 
     document.getElementById('project-title').textContent = projectName || 'Project name';
-    document.getElementById('bridge-type-display').textContent = bridgeType ? bridgeType : 'Bridge type';
-
-    if (calculationLink) {
-        document.getElementById('calculation-link-display').textContent = calculationLink;
-        document.getElementById('calculation-link-display').href = calculationLink;
-    } else {
-        document.getElementById('calculation-link-display').textContent = 'https://daveforni.github.io/scorbs/';
-        document.getElementById('calculation-link-display').href = '#';
-    }
+    document.getElementById('bridge-type-display').textContent = bridgeType ? bridgeType : 'Bridge type';   
 
     if (!isNaN(carbonFootprint) && !isNaN(functionalArea) && functionalArea > 0) {
         const carbonImpact = Math.round(carbonFootprint / functionalArea);
@@ -106,15 +97,6 @@ document.getElementById('print-btn').addEventListener('click', function () {
         const imgHeight = canvas.height * imgWidth / canvas.width;
 
         pdf.addImage(imgData, 'PNG', 0, 10, imgWidth, imgHeight);
-
-        const linkUrl = document.getElementById('calculation-link-display').href;
-
-        const linkX = 15;
-        const linkY = imgHeight - 22.5;
-        const linkWidth = 180;
-        const linkHeight = 5;
-
-        pdf.link(linkX, linkY, linkWidth, linkHeight, { url: linkUrl });
 
         pdf.save('scorecard.pdf');
     });
