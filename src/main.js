@@ -1,3 +1,4 @@
+
 document.getElementById('calculate-btn').addEventListener('click', function () {
     const projectName = document.getElementById('project-name').value;
     const bridgeType = document.getElementById('bridge-type').value;
@@ -81,4 +82,17 @@ document.getElementById('calculate-btn').addEventListener('click', function () {
         carbonRatingContainer.appendChild(resultText);
 
     }
+});
+
+document.getElementById('download-btn').addEventListener('click', function () {
+    html2canvas(document.querySelector('.container')).then(canvas => {
+        // Create an image from the canvas
+        const img = canvas.toDataURL("image/png");
+
+        // Create a link to download the image
+        const link = document.createElement('a');
+        link.href = img;
+        link.download = 'scorecard.png';
+        link.click();
+    });
 });
