@@ -1,6 +1,6 @@
 # SCORBS
 
-This is a simple GitHub Pages site designed to generate scorecards based on the SCORBS rating scheme, a variant of the IStructE 'SCORS' rating system tailored for bridges. For detailed information about SCORBS, please refer to this [article](https://www.istructe.org/sitefiles/handlers/DownloadFile.ashx?productId=10002).
+This is a simple GitHub Pages site to generate scorecards based on the SCORBS, a version of the IStructE 'SCORS' rating scheme for bridges. For detailed information about SCORBS, please refer to this [article](https://www.istructe.org/sitefiles/handlers/DownloadFile.ashx?productId=10002).
 
 ## How to Use
 
