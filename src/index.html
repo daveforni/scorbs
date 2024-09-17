@@ -12,21 +12,16 @@
             <header>
                 <h1>S<font color="#477957">CO<sub>2</sub></font>RBS</h1>
             </header>
-
             <section class="project-info">
-                <h2 id="project-title">Project name</h2> <!-- Placeholder for Project Name -->
-				<p id="bridge-type-display">Bridge type</p> <!-- Placeholder for Bridge Type -->
-				<p>Structural embodied carbon, modules A1-A5</p> <!-- Permanent message below bridge type -->
+                <h2 id="project-title">Project name</h2>
+				<i><p id="bridge-type-display">Bridge type</p></i>
+				<p>Structural embodied carbon, modules A1-A5</p>
             </section>
-
             <section class="carbon-rating-container">
                 <div class="arrow">
                     <svg height="320" width="75">
-                        <!-- Vertical bar starting at the top of A++ -->
-                        <line x1="65" y1="10" x2="65" y2="285" style="stroke:black;stroke-width:3"/>
-                        <!-- Arrow at the bottom of the vertical bar -->
-                        <polygon points="62,285.75 68,285.75 65,288.75" style="fill:black;stroke:black;stroke-width:3"/>
-                        <!-- Tickmarks and labels -->
+                        <line x1="65" y1="10" x2="65" y2="285" style="stroke:black;stroke-width:3"/>                       
+                        <polygon points="62,285.75 68,285.75 65,288.75" style="fill:black;stroke:black;stroke-width:3"/>                        
                         <line x1="50" y1="11.5" x2="65" y2="11.5" style="stroke:black;stroke-width:3"/>
                         <text x="45" y="15" font-size="14">0</text>
                         <line x1="50" y1="46.5" x2="65" y2="46.5" style="stroke:black;stroke-width:3"/>
@@ -41,7 +36,6 @@
                         <text x="45" y="260" font-size="14">> 3500</text>
                     </svg>
                 </div>
-
                 <div class="carbon-rating">
                     <div class="bar-with-label a-pp-label">
                         <div class="bar a-pp"></div>
@@ -60,17 +54,14 @@
                     <div class="bar g">G</div>
                 </div>
             </section>
-
             <footer>
 				<p>Project calculations available at <a href="#" id="calculation-link-display">https://daveforni.github.io/scorbs/</a></p>
             </footer>
         </div>
-
         <div class="container details-container">
             <header>
                 <h2>Project Details</h2>
             </header>
-
             <section class="details-input">
                 <div class="input-group">
                     <label for="project-name">Project Name:</label>
@@ -102,16 +93,20 @@
                     <label for="functional-area">Functional Area (m²):</label>
                     <input type="number" id="functional-area" placeholder="Enter functional area">
                 </div>
-            </section>
-
-            <button id="calculate-btn">Calculate</button>
-			<button id="download-btn">Download PNG</button>
-			
+            </section>			
+			<div id="button-group">
+            	<button id="calculate-btn">Calculate</button>
+			</div>
+			<div id="buttons-group">
+        		<button id="download-btn">PNG</button>
+        		<button id="print-btn">PDF</button>
+    		</div>	
         </div>
     </div>
 
     <script src="main.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
 
 </body>
 </html>
