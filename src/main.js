@@ -1,4 +1,3 @@
-
 document.getElementById('calculate-btn').addEventListener('click', function () {
     const projectName = document.getElementById('project-name').value;
     const bridgeType = document.getElementById('bridge-type').value;
@@ -25,31 +24,31 @@ document.getElementById('calculate-btn').addEventListener('click', function () {
         let shapeTopPosition = 0;
         if (carbonImpact < 250) {
             carbonClass = 'A++';
-            shapeTopPosition = 2.5;
+            shapeTopPosition = 1;
         } else if (carbonImpact >= 250 && carbonImpact < 500) {
             carbonClass = 'A+';
-            shapeTopPosition = 2.5;
+            shapeTopPosition = 1;
         } else if (carbonImpact >= 500 && carbonImpact < 1000) {
             carbonClass = 'A';
-            shapeTopPosition = 37.5;
+            shapeTopPosition = 36;
         } else if (carbonImpact >= 1000 && carbonImpact < 1500) {
             carbonClass = 'B';
-            shapeTopPosition = 72.5;
+            shapeTopPosition = 71;
         } else if (carbonImpact >= 1500 && carbonImpact < 2000) {
             carbonClass = 'C';
-            shapeTopPosition = 107.5;
+            shapeTopPosition = 106;
         } else if (carbonImpact >= 2000 && carbonImpact < 2500) {
             carbonClass = 'D';
-            shapeTopPosition = 142.5;
+            shapeTopPosition = 141;
         } else if (carbonImpact >= 2500 && carbonImpact < 3000) {
             carbonClass = 'E';
-            shapeTopPosition = 177.5;
+            shapeTopPosition = 176;
         } else if (carbonImpact >= 3000 && carbonImpact < 3500) {
             carbonClass = 'F';
-            shapeTopPosition = 212.5;
+            shapeTopPosition = 211;
         } else {
             carbonClass = 'G';
-            shapeTopPosition = 247.5;
+            shapeTopPosition = 246;
         }
 
         const existingShape = document.getElementById('carbon-class-shape');
