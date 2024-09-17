@@ -5,10 +5,9 @@ document.getElementById('calculate-btn').addEventListener('click', function () {
     const functionalArea = parseFloat(document.getElementById('functional-area').value);
     const calculationLink = document.getElementById('calculation-link').value;
 
-    document.getElementById('project-title').textContent = projectName || '';
-    document.getElementById('bridge-type-display').textContent = bridgeType ? bridgeType : '';
+    document.getElementById('project-title').textContent = projectName || 'Project name';
+    document.getElementById('bridge-type-display').textContent = bridgeType ? bridgeType : 'Bridge type';
 
-    // Update the calculation link in the footer
     if (calculationLink) {
         document.getElementById('calculation-link-display').textContent = calculationLink;
         document.getElementById('calculation-link-display').href = calculationLink;
@@ -24,31 +23,31 @@ document.getElementById('calculate-btn').addEventListener('click', function () {
         let shapeTopPosition = 0;
         if (carbonImpact < 250) {
             carbonClass = 'A++';
-            shapeTopPosition = 1;
+            shapeTopPosition = 2.5;
         } else if (carbonImpact >= 250 && carbonImpact < 500) {
             carbonClass = 'A+';
-            shapeTopPosition = 1;
+            shapeTopPosition = 2.5;
         } else if (carbonImpact >= 500 && carbonImpact < 1000) {
             carbonClass = 'A';
-            shapeTopPosition = 36;
+            shapeTopPosition = 37.5;
         } else if (carbonImpact >= 1000 && carbonImpact < 1500) {
             carbonClass = 'B';
-            shapeTopPosition = 71;
+            shapeTopPosition = 72.5;
         } else if (carbonImpact >= 1500 && carbonImpact < 2000) {
             carbonClass = 'C';
-            shapeTopPosition = 106;
+            shapeTopPosition = 107.5;
         } else if (carbonImpact >= 2000 && carbonImpact < 2500) {
             carbonClass = 'D';
-            shapeTopPosition = 141;
+            shapeTopPosition = 142.5;
         } else if (carbonImpact >= 2500 && carbonImpact < 3000) {
             carbonClass = 'E';
-            shapeTopPosition = 176;
+            shapeTopPosition = 177.5;
         } else if (carbonImpact >= 3000 && carbonImpact < 3500) {
             carbonClass = 'F';
-            shapeTopPosition = 211;
+            shapeTopPosition = 212.5;
         } else {
             carbonClass = 'G';
-            shapeTopPosition = 246;
+            shapeTopPosition = 247.5;
         }
 
         const existingShape = document.getElementById('carbon-class-shape');
@@ -71,9 +70,8 @@ document.getElementById('calculate-btn').addEventListener('click', function () {
         resultText.className = 'calculation-result';
         resultText.textContent = `${carbonImpact} kgCO₂e/m²`;
 
-
-        const blackShapeHeight = 30; // Black shape height is 30px
-        const gap = 5; // Desired gap between black shape and result text
+        const blackShapeHeight = 30;
+        const gap = 5;
         resultText.style.top = `${shapeTopPosition + blackShapeHeight + gap}px`;
 
         const carbonRatingContainer = document.querySelector('.carbon-rating');
@@ -85,13 +83,39 @@ document.getElementById('calculate-btn').addEventListener('click', function () {
 
 document.getElementById('download-btn').addEventListener('click', function () {
     html2canvas(document.querySelector('.container')).then(canvas => {
-        // Create an image from the canvas
+
         const img = canvas.toDataURL("image/png");
 
-        // Create a link to download the image
         const link = document.createElement('a');
         link.href = img;
         link.download = 'scorecard.png';
         link.click();
+    });
+});
+
+document.getElementById('print-btn').addEventListener('click', function () {
+    html2canvas(document.querySelector('.container')).then(canvas => {
+
+        const imgData = canvas.toDataURL('image/png');
+
+        const { jsPDF } = window.jspdf;
+        const pdf = new jsPDF();
+
+        const imgWidth = 210;
+        const pageHeight = 297;
+        const imgHeight = canvas.height * imgWidth / canvas.width;
+
+        pdf.addImage(imgData, 'PNG', 0, 10, imgWidth, imgHeight);
+
+        const linkUrl = document.getElementById('calculation-link-display').href;
+
+        const linkX = 15;
+        const linkY = imgHeight - 22.5;
+        const linkWidth = 180;
+        const linkHeight = 5;
+
+        pdf.link(linkX, linkY, linkWidth, linkHeight, { url: linkUrl });
+
+        pdf.save('scorecard.pdf');
     });
 });
