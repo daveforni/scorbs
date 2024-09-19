@@ -10,7 +10,7 @@ To generate a project scorecard using SCORBS, follow these steps:
 2. **Calculate Rating Class**: Assess the normalized carbon impact and receive the corresponding rating class.
 3. **Print Scorecard**: Download the scorecard in either `.png` or `.pdf` format.
 
-Visit [SCORBS](#) to access the scorecard generator.
+Visit [SCORBS](https://daveforni.github.io/scorbs/) to access the scorecard generator.
 
 ## Repository Structure
 
